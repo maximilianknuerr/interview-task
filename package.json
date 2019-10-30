@@ -1,27 +1,29 @@
 {
-  "name": "application",
-  "version": "0.1.0",
-  "private": true,
+  "name": "interview-task",
+  "version": "1.0.0",
+  "description": "Full Stack App",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianknuerr/interview-task.git"
+  },
+  "author": "maximilian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximilianknuerr/interview-task/issues"
+  },
+  "homepage": "https://github.com/maximilianknuerr/interview-task#readme",
   "dependencies": {
-    "core-js": "^3.3.2",
-    "vue": "^2.6.10"
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "nodemon": "^1.19.4"
+  }
 }
