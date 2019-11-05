@@ -14,9 +14,13 @@
         v-bind:key="post._id"
         
       >
-        {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}
-        <p class="text">{{ post.text }}</p> 
-        <button class="delete" v-on:click="deletePost(post._id)">x</button>
+      {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}s
+      <div class="row">
+          <p class="text col-90">{{ post.text }}</p> 
+          <button class="delete col-10" v-on:click="deletePost(post._id)">x</button>
+      </div>
+        
+        
       </div> 
     </div>
   </div>
@@ -57,6 +61,39 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.row { 
+  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 5px; 
+	border-radius: 5px; 
+  z-index: 3;
+
+}
+.col-5 { width: 5%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-10 { width: 10%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-15 { width: 15%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-20 { width: 20%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-25 { width: 24%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-30 { width: 30%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-33 { width: 33.33%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-35 { width: 35%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-40 { width: 40%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-45 { width: 45%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-50 { width: 50%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-55 { width: 55%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-60 { width: 60%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-65 { width: 65%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-70 { width: 70%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-75 { width: 75%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-80 { width: 80%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-85 { width: 85%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-90 { width: 90%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-95 { width: 95%; min-height: 10px; display: block; float: left; box-sizing: border-box; }
+.col-100 { width: 100%; min-height: 10px; display: block; box-sizing: border-box; }
+
 button.delete {
   width: 30px;
   height: 30px;
@@ -86,6 +123,7 @@ div.post {
   background-color:  white;
   padding: 10px 10px 30px 10px;
   margin-bottom: 15px;
+  height: auto;
 }
 
 div.created-at {
@@ -100,7 +138,8 @@ div.created-at {
 
 p.text {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0;
+
 }
 </style>
