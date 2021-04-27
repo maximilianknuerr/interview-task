@@ -33,7 +33,7 @@ jobs:
         with:
           node-version: 15.0
 
-      - run: ./server npm ci
+      - run: server npm ci
       - run: ./server npm run unit-tests
       - run: ./server npm run integration-tests
       - run: prettier --check "server/**"
